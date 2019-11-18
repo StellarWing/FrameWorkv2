@@ -1,6 +1,6 @@
-Mimim minim;
-AudioPlayer bump, coin, theme, gameover; // blank out everything here when running
-                                         // import sounds before Minim minim
+//Mimim minim;
+//AudioPlayer bump, coin, theme, gameover; // blank out everything here when running
+// import sounds before Minim minim
 color teal = #008080;
 int mode;
 final int INTRO = 0;
@@ -19,11 +19,11 @@ void setup() {
   vy = random(-3, 3);
   score = 0;
   lives = 3;
-  minim = new Minim(this); // blank this out when running
-  coin     = minim.LoadFile(); // in the () put file name in it, blank it out when running
-  bump     = minim.LoadFile(); // blank it out
-  gameover = minim.LoadFile(); // blank it out
-  theme    = minim.LoadFile(); // blank it out
+  //  minim = new Minim(this); // blank this out when running
+  //  coin     = minim.LoadFile(); // in the () put file name in it, blank it out when running
+  //  bump     = minim.LoadFile(); // blank it out
+  //  gameover = minim.LoadFile(); // blank it out
+  //  theme    = minim.LoadFile(); // blank it out
 
   size(800, 800); 
   mode = INTRO;
