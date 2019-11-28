@@ -4,7 +4,7 @@ void gameover() {
   rect (275, 450, 245, 145); //reset button
   rect (275, 250, 245, 145); //intro button
   fill (0);
-  text ("retry", 355, 530);
+  text ("Retry", 355, 530);
 }
 
 void gameoverClicks() {

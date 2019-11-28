@@ -1,4 +1,4 @@
-//Mimim minim;
+  //Mimim minim;
 //AudioPlayer bump, coin, theme, gameover; // blank out everything here when running
 // import sounds before Minim minim
 color teal = #008080;
