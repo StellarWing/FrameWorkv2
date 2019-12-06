@@ -1,4 +1,4 @@
-  //Mimim minim;
+//Mimim minim;
 //AudioPlayer bump, coin, theme, gameover; // blank out everything here when running
 // import sounds before Minim minim
 color teal = #008080;
@@ -7,14 +7,15 @@ final int INTRO = 0;
 final int GAME = 1;
 final int PAUSE = 2;
 final int GAMEOVER = 3;
+final int OPTIONS = 4;
 
 float x, y, vx, vy;
 int score, lives;
-
+int fade =0;
 
 void setup() {
-  x = 400;
-  y = 400;
+  x = width/2;
+  y = height/2;
   vx = random(-3, 3);
   vy = random(-3, 3);
   score = 0;
@@ -38,6 +39,8 @@ void draw() {
     pause();
   } else if (mode == GAMEOVER) {
     gameover();
+  } else if (mode == OPTIONS) {
+    options();
   } else {
     println("Error: Mode = " + mode);
   }

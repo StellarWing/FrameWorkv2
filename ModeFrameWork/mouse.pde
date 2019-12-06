@@ -7,6 +7,7 @@ void mouseReleased() {
     pauseClicks();
   } else if (mode == GAMEOVER) {
     gameoverClicks();
+  } else if (mode == OPTIONS) {
   } else {
     println("Error: Mode = " + mode);
   }
