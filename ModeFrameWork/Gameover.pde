@@ -6,10 +6,18 @@ void gameover() {
   fill (0);
   textSize(37);
   text ("Retry", 355, 530);
+  text("Highscore: " + highscore, 100, 100);
+ 
 }
 
 void gameoverClicks() {
   if (mouseX > 275 && mouseX < 520 && mouseY > 450 && mouseY < 595) {
     mode = GAME;
+  }
+}
+
+void highscore() {
+  if (score > highscore) {
+    highscore = score;
   }
 }

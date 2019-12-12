@@ -10,8 +10,8 @@ final int GAMEOVER = 3;
 final int OPTIONS = 4;
 
 float x, y, vx, vy;
-int score, lives;
-int fade =0;
+int score, lives, highscore;
+int fade = 0;
 
 void setup() {
   x = width/2;
@@ -20,6 +20,7 @@ void setup() {
   vy = random(-3, 3);
   score = 0;
   lives = 3;
+  highscore = 0;
   //  minim = new Minim(this); // blank this out when running
   //  coin     = minim.LoadFile(); // in the () put file name in it, blank it out when running
   //  bump     = minim.LoadFile(); // blank it out

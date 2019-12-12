@@ -9,12 +9,12 @@ void game() {
   strokeWeight(4);
   fill(255);
   ellipse(x, y, 100, 100);
-  
+
   noStroke();
-rect(700, 0, 100, 65);
-textSize(17);
-fill(0);
-text("PAUSE", 725, 38);
+  rect(700, 0, 100, 65);
+  textSize(17);
+  fill(0);
+  text("PAUSE", 725, 38);
 
   x = x + vx;
   y = y + vy;
@@ -25,25 +25,49 @@ text("PAUSE", 725, 38);
 }
 
 void gameClicks() {
- 
+
   if (mouseX > 700 && mouseY < 800 && mouseY > 0 && mouseY < 65) {
     mode = PAUSE;
     fade = 0;
   }
-  
+
   if ( dist(mouseX, mouseY, x, y) < 50) {
     score = score + 1; //or score++;
     vx = vx * 1.05;
     vy = vy * 1.05;
+    highscore();
+  } else if (mouseX > 700 && mouseY < 800 && mouseY > 0 && mouseY < 65) {
+    mode = PAUSE;
+    fade = 0;
   } else {
     lives = lives - 1;
-    if (lives == 0) 
+    vx = 2;
+    vy = 2;
+    if (lives == 0) { 
       mode = GAMEOVER;
       vx = 2;
       vy = 2;
+    }
     if (lives == 0) {
-      lives = 3; 
+      lives = 3;
       score = 0;
     }
   }
 }
+
+
+
+
+
+// {
+//  lives = lives - 1;
+//  if (lives == 0) 
+//   mode = GAMEOVER;
+//    vx = 2;
+//    vy = 2;
+//  if (lives == 0) {
+//   lives = 3; 
+
+//  }
+// }
+//}
