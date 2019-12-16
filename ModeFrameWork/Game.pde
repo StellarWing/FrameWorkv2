@@ -1,4 +1,4 @@
-color blue = #97B6F2;
+
 void game() {
   background (blue);
 
@@ -7,10 +7,11 @@ void game() {
   text("Lives: " + lives, 100, 300);
 
   strokeWeight(4);
-  fill(255);
+  fill(colour);
   ellipse(x, y, 100, 100);
 
   noStroke();
+  fill(255);
   rect(700, 0, 100, 65);
   textSize(17);
   fill(0);
